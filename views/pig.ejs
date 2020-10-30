@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script data-ad-client="ca-pub-8541444571106000" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css2?family=Advent+Pro&family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <title></title>
+	  <script>
+function myFunction() {
+  var copyText = document.getElementById("pig");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+	  <style>
+	  
+	  .float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+	  
+	  </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-light fixed-top" style="background-color: pink;">
+  <a class="navbar-brand" href="#" style="font-family: 'Gloria Hallelujah', cursive; color:white">
+    Ping Me Piggy !!!
+  </a>
+</nav>
+	  
+	  
+<div class="mt-5 mb-2">
+	<div class="text-center mt-3">
+  <img src="/home.gif" class="rounded" style="width:100px;height:100px">
+</div>
+		<p style="font-family: 'Gloria Hallelujah', cursive; color:pink">
+				
+	</p>
+	
+	<div class="container ">
+		<div >
+				
+			<h3 style="text-align: center; mt-5;font-family: 'Gloria Hallelujah', cursive; color:pink">
+			Hello <%=pig%> Pig!!! <br>&#128151
+		</h3>
+			
+		
+			<p style="text-align:center;font-family: 'Gloria Hallelujah', cursive;"> 
+				<strong>Ping-Me-Piggy</strong> 
+		</p>
+			<div style="background-color:#EA7773;border-radius:18px;color:white">
+				<p style="text-align:center;font-family: 'Gloria Hallelujah', cursive;">
+					Now Send this Link to Your <strong>Friends</strong>
+		</p>
+				
+			</div>
+			<div class="card shadow-lg pb-3" style="background-color:pink;border-radius:17px;text-align: center;">
+					<div class="card-body mt-2">
+    <h6 style="font-family: 'Advent Pro', sans-serif;
+font-family: 'Gloria Hallelujah', cursive;color:white ">
+						
+						</h6>
+						<input type="text" value="https://wtfpigs.herokuapp.com/pig/send/<%=pigId%>/<%=pig%>" id="pig" readonly>
+						
+  </div>
+				<div style="text-align: center;">
+					<button onclick="myFunction()" class="btn mt-2" style="background-color:white;color:pink;width:100px;height:40px">
+							Copy
+						</button>
+					<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://api.whatsapp.com/send?text=Write Secret Message about <%=pig%> 🧛‍♂🧛‍♀. <%=pig%> will never know who has sent the MESSAGE.‼🤭😍😍🤭🤭🤭🤭🤭🤭🤭🤭🤭🤭🤭🤭🤭.<%=pig%> பற்றி ரகசிய செய்தி எழுதுங்கள் 🧛‍♂🧛♂🧛♀. செய்தி அனுப்பியவர் யார் என்பதை <%=pig%> ஒருபோதும் அறிய மாட்டார்.‼  🤭😍👇👇👇👇👇‼😍🤭 https://wtfpigs.herokuapp.com/pig/send/<%=pigId%>/<%=pig%> . Create your account here 😍👇👇👇👇 https://wtfpigs.herokuapp.com" class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
+					<br>
+					
+					<button onClick="window.location.reload();" class="btn mt-2" style="background-color:white;color:pink;width:180px;height:40px">
+							Check Ur Messages !!
+						</button>
+					
+				</div>
+			</div>
+			<h4 class="mt-5" style="text-align:center;font-family: 'Gloria Hallelujah', cursive;color:pink">
+				Your Chats
+			</h4>
+			<div style="margin-top:34px;">
+					<%if(msg){%>
+<%msg.forEach((x,i)=>{%>
+						
+						<div>
+							<div class="card shadow" style="border-radius:23px;border-width:4px;border-color:pink">
+  <div class="card-body float-left">
+    <%=x%>
+	  <p>
+		<small></small>  
+	  </p>
+  </div>
+						
+					
+					<%})%>
+					
+</div>
+									<br>
+					</div>			
+								
+<%}%>
+				</div>
+			</div>
+			
+		</div>
+		<div class="mt-4">
+				<form action="/pig/delete/<%=pigId%>" method="GET">
+					<button type="submit" style="background-color:white;color:pink;" class="btn btn-block">
+				Delete account
+			</button>
+					
+			</form>
+			
+		</div>
+	</div>
+	
+	  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
